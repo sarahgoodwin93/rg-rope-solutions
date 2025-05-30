@@ -8,24 +8,17 @@
     <title>RG Rope Solutions</title>
 </head>
 <body>
-    <div class="collapse navbar-collapse">
-        <nav class="navbar-nav">
-            <ul class="navbar-nav nav-list ml-auto">
-                <li class="nav-item">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html">Contact</a>
-                </li>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="services.html">Services</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </div>
+    </header>    
     <div class="page-body">
         <h1 class="heading">
             <strong>Services</strong> – Delivering Reliable Rope Access Solutions for Complex Offshore Projects.
@@ -74,5 +67,15 @@
     <section>
         <a href="mailto:rgropesolutions@gmail.com" class="sticky-cta">Hire Now</a>
     </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list');
+    
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+            document.body.classList.toggle('menu-open');
+        });
+    </script>    
 </body>
 </html>

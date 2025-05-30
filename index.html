@@ -10,15 +10,15 @@
 <body>
     <header>
         <nav class="navbar">
+            <div class="hamburger">&#9776;</div>
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="services.html">Services</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
-
+    </header>    
     <main>
         <section class="hero">
             <h1><strong>RG Rope Solutions</strong> – Elevating Safety, Expertise, and Excellence Offshore.</h1>
@@ -41,11 +41,20 @@
                 <img src="assets/images/ropes.png" alt="Knotted ropes">
             </div>
         </section>
-
     </main>
 
     <footer>
         <p>&copy; 2025 RG Rope Solutions</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list');
+    
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+            document.body.classList.toggle('menu-open');
+        });
+    </script>    
 </body>
 </html>
